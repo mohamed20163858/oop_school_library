@@ -3,11 +3,9 @@ class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id, :rentals
 
-  @@count = 0
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  def initialize(age, name = 'Unknown', id = nil, parent_permission: true)
     super()
-    @@count += 1
-    @id = @@count
+    @id = id
     @name = name
     @age = age
     @parent_permission = parent_permission
