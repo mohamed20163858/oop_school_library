@@ -50,40 +50,19 @@
 
 > ruby, rubocop linter
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 > The school library ruby App  has the following features:-
 
-- **[List all books inside the library]**
-- **[List all people that has permission to enter the library]**
-- **[register new person either a student or a teacher]**
-- **[register new book]**
-- **[create a rental to track each book rented by person x]**
-- **[list all rentals by person x just by giving his ID to the App]**
-- **[Exit to quit the application]**
+- **List all books inside the library**
+- **List all people that has permission to enter the library**
+- **Register new person either a student or a teacher**
+- **Register new book**
+- **Create a rental to track each book rented by person x**
+- **List all rentals by person x just by giving his ID to the App**
+- **Exit to quit the application**
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
