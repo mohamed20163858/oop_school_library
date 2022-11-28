@@ -1,13 +1,12 @@
 require './app'
 
 class Options
-  def initialize(number)
+  def initialize
     @app = App.new
-    @number = number
   end
 
-  def select_option
-    case @number
+  def select_option(number)
+    case number
     when '1'
       @app.list_books
     when '2'

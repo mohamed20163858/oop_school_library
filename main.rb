@@ -1,24 +1,15 @@
 require './option'
-
-def display
-  number = 0
-  while number != '7'
-    puts('Please choose an option by entering a number')
-    puts('1 - List all books')
-    puts('2 - List all people')
-    puts('3 - Create a person')
-    puts('4 - Create a book')
-    puts('5 - Create a rental')
-    puts('6 - List all rentals for a given person id')
-    puts('7 - Exit')
-    number = gets.chomp
-  end
-  option = Options.new(number)
-  option.select_option
-end
+require './menu'
 
 def main
-  display
+  number = 0
+  menu = Menu.new
+  option = Options.new
+  while number != '7'
+    menu.display_options
+    number = gets.chomp
+    option.select_option(number)
+  end
 end
 
 main
