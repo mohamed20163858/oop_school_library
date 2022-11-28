@@ -1,24 +1,7 @@
-require './app'
-def select_option(number, app)
-  case number
-  when '1'
-    app.list_books
-  when '2'
-    app.list_persons
-  when '3'
-    app.create_a_person
-  when '4'
-    app.create_a_book
-  when '5'
-    app.create_a_rental
-  when '6'
-    app.list_rentals
-  end
-end
+require './option'
 
-def main
+def display
   number = 0
-  app = App.new
   while number != '7'
     puts('Please choose an option by entering a number')
     puts('1 - List all books')
@@ -29,7 +12,13 @@ def main
     puts('6 - List all rentals for a given person id')
     puts('7 - Exit')
     number = gets.chomp
-    select_option(number, app)
   end
+  option = Options.new(number)
+  option.select_option
 end
+
+def main
+  display
+end
+
 main
