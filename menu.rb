@@ -1,4 +1,4 @@
-class Menu 
+class Menu
   def display_options
     puts('Please choose an option by entering a number')
     puts('1 - List all books')
