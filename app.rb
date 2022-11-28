@@ -2,6 +2,7 @@ require './student'
 require './teacher'
 require './book'
 require './rental'
+#require 'pry'
 class App
   def initialize
     puts("Welcome to  School Library App!\n\n")
@@ -46,6 +47,7 @@ class App
     print('Do you want to create a student (1) or a teacher (2) or' \
           'return to main menu (any other key)? [Input the number]: ')
     num = gets.chomp
+    #binding.pry
     case num
     when '1'
       create_a_student
