@@ -19,6 +19,10 @@ class Options
       @app.create_a_rental
     when '6'
       @app.list_rentals
+    when '7'
+      @app.save_people 
+      @app.save_books
+      @app.save_rentals
     end
   end
 end
