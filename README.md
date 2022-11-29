@@ -99,11 +99,19 @@ Here is a screenshots of an example to teach you how to correctly use this App:-
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Mohamed Saleh**
 
 - GitHub: [@mohamed20163858](https://github.com/mohamed20163858)
 - Twitter: [@mohamed20163858](https://twitter.com/mohamed20163858)
 - LinkedIn: [MohamedMohsenSaleh](https://www.linkedin.com/in/mohamedmohsensaleh/)
+
+👤 **OmarMWarraich**
+
+- GitHub: [@OmarMWarraich](https://github.com/OmarMWarraich)
+- Twitter: [@omarwarraich1](https://twitter.com/omarwarraich1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/o-va/)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,9 +129,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project give it a thumb up :	👍 and share this projects with your friends 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,15 +137,13 @@ If you like this project...
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
 - **[Does this App has a GUI?]**
 
   - [Actually till now No but i will work on that in the future currently it only work as a console log application]
 
 - **[What is the name of database application that this app use to store its data?]**
 
-  - [Well this app donot use any database at all all the inforamtion you enter will be totally lost if you close the app it is just a demostartion app to show case]
+  - [Well this app donot use any database at all all the inforamtion you enter will be saved as json format for every object created to make this program work and these objects are rentals, books, and people]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
