@@ -5,11 +5,13 @@ require './rental'
 require 'json'
 
 class App
+  attr_accessor :people, :books, :rentals
+
   def initialize
     puts("Welcome to  School Library App!\n\n")
-    @people = File.exist?('people.json') ? load_people : []
-    @books = File.exist?('books.json') ? load_books : []
-    @rentals = File.exist?('rentals.json') ? load_rentals : []
+    @people = []
+    @books = []
+    @rentals = []
   end
 
   def create_a_person
@@ -105,101 +107,5 @@ class App
     person.rentals.each do |rental|
       puts("Date: #{rental.date}, Book: \"#{rental.book.title}\" by #{rental.book.author}")
     end
-  end
-
-  def save_people
-    people = []
-    @people.each do |person|
-      details = {}
-      details['type'] = person.class.name
-      details['name'] = person.name
-      details['id'] = person.id
-      details['age'] = person.age
-      if person.instance_of?(::Student)
-        details['parent_permission'] = person.parent_permission
-      else
-        details['specialization'] = person.specialization
-      end
-      people.push(details)
-    end
-    File.write('people.json', JSON.generate(people))
-  end
-
-  def load_people
-    people = []
-    data = JSON.parse(File.read('people.json'))
-    data.each do |person|
-      age = person['age']
-      name = person['name']
-      id = person['id']
-      if person['type'] == 'Student'
-        parent_permission = person['parent_permission']
-        people.push(Student.new(age, name, id, parent_permission: parent_permission))
-      else
-        specialization = person['specialization']
-        people.push(Teacher.new(age, specialization, name, id))
-      end
-    end
-    people
-  end
-
-  def save_books
-    books = []
-    @books.each do |book|
-      details = {}
-      details['title'] = book.title
-      details['author'] = book.author
-      details['index'] = book.index
-      books.push(details)
-    end
-    File.write('books.json', JSON.generate(books))
-  end
-
-  def load_books
-    books = []
-    data = JSON.parse(File.read('books.json'))
-    data.each do |book|
-      title = book['title']
-      author = book['author']
-      index = book['index']
-      books.push(Book.new(title, author, index))
-    end
-    books
-  end
-
-  def save_rentals
-    rentals = []
-    @rentals.each do |rental|
-      details = {}
-      details['date'] = rental.date
-      title = rental.book.title
-      author = rental.book.author
-      index = rental.book.index
-      details['book'] = { 'title' => title, 'author' => author, 'index' => index }
-      type = rental.person.class.name
-      name = rental.person.name
-      id = rental.person.id
-      age = rental.person.age
-      details['person'] = { 'type' => type, 'name' => name, 'id' => id, 'age' => age }
-      if type == 'Student'
-        details['person']['parent_permission'] = rental.person.parent_permission
-      else
-        details['person']['specialization'] = rental.person.specialization
-      end
-      rentals.push(details)
-    end
-    File.write('rentals.json', JSON.generate(rentals))
-  end
-
-  def load_rentals
-    rentals = []
-    data = JSON.parse(File.read('rentals.json'))
-    data.each do |rental|
-      date = rental['date']
-      person = @people[rental['person']['id'] - 1]
-      book = @books[rental['book']['index']]
-      rentals.push(Rental.new(date, book, person))
-    end
-    rentals
   end
 end
