@@ -2,11 +2,16 @@ require './student'
 require './teacher'
 require './book'
 require './rental'
+require 'json'
+
 class App
+  attr_accessor :people, :books, :rentals
+
   def initialize
     puts("Welcome to  School Library App!\n\n")
     @people = []
     @books = []
+    @rentals = []
   end
 
   def create_a_person
@@ -60,7 +65,8 @@ class App
     title = gets.chomp
     print('Author: ')
     author = gets.chomp
-    book = Book.new(title, author)
+    index = @books.length
+    book = Book.new(title, author, index)
     @books.push(book)
     puts('Book created successfully')
   end
@@ -88,7 +94,8 @@ class App
     date = gets.chomp
     book = @books[book_index]
     person = @people[person_index]
-    Rental.new(date, book, person)
+    rental = Rental.new(date, book, person)
+    @rentals.push(rental)
     puts('Rental created successfully')
   end
 
