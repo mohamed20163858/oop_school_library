@@ -48,7 +48,7 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> ruby, rubocop linter
+> ruby, rubocop linter, rspec testing
 
 <!-- Features -->
 
