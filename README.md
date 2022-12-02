@@ -96,7 +96,7 @@ Here is a screenshots of an example to teach you how to correctly use this App:-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Tests 
-the app is tested using Rspec library you can check the tests by openning your terminal, then change the directory to the location of this repo using this command `cd file_path`, then run this command `gem install rspec`, finally run this command `rspec spec` you should see a screen like that 
+the app is tested using Rspec library you can check the tests by openning your terminal, then change the directory to the location of this repo using this command `cd file_path`, then run this command `gem install rspec`, finally run this command `rspec spec` or `rspec spec --format doc` for documented test results you should see a screen like that 
 ![image](https://user-images.githubusercontent.com/22921170/205204379-de95a414-ed5f-4f4b-80a9-c3b2063c1eac.png)
 
 <!-- AUTHORS -->
