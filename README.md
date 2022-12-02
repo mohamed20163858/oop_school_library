@@ -95,6 +95,10 @@ Here is a screenshots of an example to teach you how to correctly use this App:-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Tests 
+the app is tested using Rspec library you can check the tests by openning your terminal, then change the directory to the location of this repo using this command `cd file_path`, then run this command `gem install rspec`, finally run this command `rspec spec` you should see a screen like that 
+![image](https://user-images.githubusercontent.com/22921170/205204379-de95a414-ed5f-4f4b-80a9-c3b2063c1eac.png)
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -151,5 +155,5 @@ If you like this project give it a thumb up :	👍 and share this projects with 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
